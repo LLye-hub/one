@@ -1,2 +1,17 @@
 # Project exclude paths
 /target/
+.classpath
+.project
+.settings/
+/bin/
+/lib/
+logs/
+*.log
+.DS_Store
+.idea/
+*.iml
+.mvn/
+rebel.xml
+*.class
+target/
+*target/
