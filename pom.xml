@@ -17,6 +17,11 @@
         <logback-access.version>1.1.7</logback-access.version>
         <logback-classic.version>1.1.7</logback-classic.version>
 
+        <commons-lang3.version>3.9</commons-lang3.version>
+        <guava.version>23.0</guava.version>
+
+        <mysql.version>8.0.28</mysql.version>
+
     </properties>
 
     <dependencies>
@@ -41,6 +46,25 @@
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
             <version>${logback-classic.version}</version>
+        </dependency>
+
+        <!-- 三方库 -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${commons-lang3.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${guava.version}</version>
+        </dependency>
+
+        <!-- 数据库连接 -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.version}</version>
         </dependency>
 
     </dependencies>
