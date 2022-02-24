@@ -33,7 +33,7 @@ public class MysqlConnect {
 		//注册数据库驱动
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			System.out.println("数据库驱动加载成功");
+//			System.out.println("数据库驱动加载成功");
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}
@@ -44,7 +44,7 @@ public class MysqlConnect {
 			String user = "root";
 			String password = "rootroot";
 			connection = DriverManager.getConnection(url, user, password);
-			System.out.println("数据库连接成功");
+//			System.out.println("数据库连接成功");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
