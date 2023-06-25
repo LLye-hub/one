@@ -4,6 +4,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <!-- 这个parent是springboot的父级依赖，它提供相关的starter的maven管理以及版本号管理，还有相关maven插件的公共配置 -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.13.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
     <groupId>org.example</groupId>
     <artifactId>one</artifactId>
     <version>1.0.0-SNAPSHOT</version>
@@ -21,6 +29,8 @@
         <guava.version>23.0</guava.version>
 
         <mysql.version>8.0.28</mysql.version>
+
+        <druid.version>1.1.17</druid.version>
 
     </properties>
 
@@ -60,6 +70,12 @@
             <version>${guava.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.aliyun.odps</groupId>
+            <artifactId>odps-sdk-udf</artifactId>
+            <version>0.29.10-public</version>
+        </dependency>
+
         <!-- 数据库连接 -->
         <dependency>
             <groupId>mysql</groupId>
@@ -67,10 +83,44 @@
             <version>${mysql.version}</version>
         </dependency>
 
+        <!-- 这是springboot的核心starter，它将完成起步依赖，自动配置，日志，YAML配置等功能 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+        <!-- 测试依赖 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.junit.vintage</groupId>
+                    <artifactId>junit-vintage-engine</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <!-- alibaba开发的druid连接池 -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <!-- 对应properties中的<druid.version> -->
+            <version>${druid.version}</version>
+        </dependency>
+
     </dependencies>
 
     <build>
         <plugins>
+            <!-- spring boot打包插件，主要将spring boot应用打包成jar文件或者war文件 -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>org.example.Application</mainClass>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>

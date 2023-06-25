@@ -14,6 +14,10 @@ public class HelloWorld {
 
 		System.out.println(Objects.equals(null, 1));
 
+		String a = "hello";
+		String b = "hel lo";
+		System.out.println(a == b);
+
 
 	}
 
