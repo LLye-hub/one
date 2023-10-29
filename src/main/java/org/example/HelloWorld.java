@@ -1,9 +1,5 @@
 package org.example;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-
 /**
  * @author 数据组-雨叶
  * @Description
@@ -12,6 +8,9 @@ import java.util.List;
 public class HelloWorld {
 
 	public static void main(String[] args) {
+		String str = "Hello World !";
+		System.out.println(str.substring(0, -1));
+
 		//System.out.println("Hello World !");
 		//
 		//System.out.println(Objects.equals(null, 1));
@@ -40,12 +39,12 @@ public class HelloWorld {
 		//int[][] arr2 = new int[][]{{0,1},{1,2},{3,0}};
 		//System.out.println(Arrays.toString(arr2[0]));
 
-		List<Integer> arr = new ArrayList<>();
-		arr.add(1);
-		arr.add(2);
-		arr.add(3);
-		Collections.sort(arr);
-		System.out.println(arr.toString());
+		//List<Integer> arr = new ArrayList<>();
+		//arr.add(1);
+		//arr.add(2);
+		//arr.add(3);
+		//Collections.sort(arr);
+		//System.out.println(arr.toString());
 
 
 	}
