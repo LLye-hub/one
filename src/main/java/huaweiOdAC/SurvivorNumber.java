@@ -1,4 +1,4 @@
-package huaweiOd;
+package huaweiOdAC;
 
 import java.util.ArrayDeque;
 import java.util.Arrays;
@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 /**
  * @author 数仓开发-雨叶
- * @description 荒岛逃生游戏
+ * @description 荒岛逃生游戏 (AC)
  * 一个荒岛上有若干人，岛上只有一条路通往岛屿两端的港口，大家需要逃生两端的港口才可逃生，假定每个人移动的速度一样，且只可选择向左或向右逃生。
  * 若两个人相遇，则进行决斗，战斗力强的能够活下来，并损失掉与对方相同的战斗力；若战斗力相同，则两人同归于尽。
  * 输入：正表示向右逃生，负表示向左逃生
@@ -34,6 +34,7 @@ public class SurvivorNumber {
 		int n = nums.length;
 
 		Deque<Integer> right = new ArrayDeque<>();
+		Deque<Integer> left = new ArrayDeque<>();
 		int leftMan = 0;
 		int cur;
 		int cnt = 0;
@@ -63,10 +64,17 @@ public class SurvivorNumber {
 				// 打败所有向右逃生的人后还有战力，则逃出成功
 				if (leftMan > 0) {
 					cnt++;
+					left.add(-leftMan);
 				}
 			}
 		}
 		System.out.println(right.size() + cnt);
+		for (Integer k : left) {
+			System.out.print(k + " ");
+		}
+		for (Integer k : right) {
+			System.out.print(k + " ");
+		}
 	}
 
 }
