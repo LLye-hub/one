@@ -1,4 +1,4 @@
-package huaweiOd;
+package huaweiOdAC;
 
 import org.apache.commons.lang3.StringUtils;
 
@@ -7,10 +7,11 @@ import java.util.Scanner;
 
 /**
  * @author 数仓开发-雨叶
- * @description 知识图谱新词挖掘1
- * 新词挖掘：给出一个待挖掘文本内容字符串content和一个词的字符串word，找到content中所有word的新词
- * 新词：使用词word的字符排列行程的字符串
- * 请帮小华实现新词挖掘，返回发现的新词数量
+ * @description 知识图谱新词挖掘1（AC）
+小华负责公司知识图谱产品，现在要通过新词挖掘完善知识图谱。
+新词挖掘：给出一个待挖掘文本内容字符串content和一个词的字符串word，找到content中所有word的新词。
+新词：使用词word的字符排列形成的字符串。
+请帮小华实现新词挖掘，返回发现的新词的数量。
  * 输入描述：第一行为待挖掘文本内容content
  * 第二行为词word
  * 输出描述：在content中找到所有word的新词数量
