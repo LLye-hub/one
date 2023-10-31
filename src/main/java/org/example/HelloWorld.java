@@ -1,5 +1,10 @@
 package org.example;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
 /**
  * @author 数据组-雨叶
  * @Description
@@ -8,8 +13,16 @@ package org.example;
 public class HelloWorld {
 
 	public static void main(String[] args) {
-		String str = "Hello World !";
-		System.out.println(str.substring(0, -1));
+
+		String[] array = {"apple", "banana", "orange"};
+		// 使用 Arrays.asList() 将数组转换为列表
+		List<String> list1 = new ArrayList<>(Arrays.asList(array));
+		// 使用流和 Collectors.toList() 将数组转换为列表
+		List<String> list2 = Arrays.stream(array).collect(Collectors.toList());
+
+
+		//String str = "Hello World !";
+		//System.out.println(str.substring(0, -1));
 
 		//System.out.println("Hello World !");
 		//
