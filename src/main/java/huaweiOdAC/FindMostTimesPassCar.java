@@ -1,4 +1,4 @@
-package huaweiOd;
+package huaweiOdAC;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 /**
  * @author 数据组-雨叶
- * @description 找出通过车辆最多颜色
+ * @description 找出通过车辆最多颜色 (AC)
  * 在一个狭小的路口，每秒只能通过一辆车，假如车辆的颜色有三种，找出N秒内经过最多颜色的车辆数量。三种颜色编号为0，1，2
  * @case 0 1 2 1
  * 3
