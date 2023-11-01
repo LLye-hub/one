@@ -1,4 +1,4 @@
-package huaweiOd;
+package huaweiOdAC;
 
 import java.util.HashSet;
 import java.util.Scanner;
@@ -6,7 +6,7 @@ import java.util.Set;
 
 /**
  * @author 数仓开发-雨叶
- * @description 数字游戏
+ * @description 数字游戏 AC
  * 是否存在连续的若干张牌，其和可以整除小明手中牌上的数字
  * @case 6 7
  * 2 12 6 3 5 5
